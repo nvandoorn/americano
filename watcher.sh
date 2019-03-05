@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-buildRun() {
-  make && ./main
+build() {
+  make
 }
 
-
-test
-while sleep 5; do buildRun; done
+build
+while sleep 5; do build; done
