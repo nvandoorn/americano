@@ -24,7 +24,9 @@
 
 enum RobotCorrection_t { MOVE_STRAIGHT = 0, MOVE_RIGHT = 1, MOVE_LEFT = 2 };
 
-// use a global
+// use a global context structure
+// to avoid coupling our routines
+// to the global state
 struct RobotContext_t {
   enum RobotState_t state;
   enum RobotState_t prevState;
